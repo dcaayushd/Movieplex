@@ -1,16 +1,37 @@
-# movieplex
+# Movieplex: A Flutter App for Movie Exploration
 
-A new Flutter project.
+Movieplex is a Flutter application designed to provide a user-friendly and visually appealing experience for browsing and exploring movies. It leverages the power of Flutter to deliver a smooth and cross-platform experience.
+
+## Features
+
+* **Carousel Display:** Presents movies in a visually captivating carousel format, allowing users to easily swipe through various options.
+* **Movie Details:** Provides dedicated screens or views for in-depth information about each movie, including posters, titles, genres, imdb ratings, duration, and more.
+* **Customizable Card Design:** Employs a well-structured and aesthetically pleasing card layout with rounded corners, clear hierarchy, and distinct sections for key movie details.
+* **Touch Interaction:** Enables users to tap on movies within the carousel to navigate to detailed information screens or views.
+
+## Screenshots
+
+![Screenshot 1](screenshots/movieplex1.png)
+![Screenshot 2](screenshots/movieplex2.png)
+![Screenshot 3](screenshots/movieplex3.png)
+
+## Dependencies
+
+* flutter/material.dart
+* carousel_slider
+* get
+* animate_do
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Clone the repository
+2. Run `flutter pub get` to install dependencies
+3. Run the app with `flutter run`
 
-A few resources to get you started if this is your first Flutter project:
+## License
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+This project is licensed under the [MIT License](LICENSE).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
