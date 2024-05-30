@@ -8,6 +8,8 @@ import '../../../controller/card_controller.dart';
 class DescriptionMovieDetails extends StatelessWidget {
   final _cardController = Get.find<CardController>();
 
+  DescriptionMovieDetails({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Positioned(
@@ -15,8 +17,8 @@ class DescriptionMovieDetails extends StatelessWidget {
       left: 20,
       child: Center(
         child: FadeInDown(
-          delay: Duration(milliseconds: 900),
-          child: Container(
+          delay: const Duration(milliseconds: 900),
+          child: SizedBox(
             width: gWidth / 1.1,
             height: gHeight / 6,
             child: SingleChildScrollView(
@@ -24,7 +26,7 @@ class DescriptionMovieDetails extends StatelessWidget {
               _cardController
                   .listOfMovies[_cardController.currentIndex.value]
                   .description,
-              style: TextStyle(color: Color.fromARGB(255, 131, 131, 131)),
+              style: const TextStyle(color: Color.fromARGB(255, 131, 131, 131)),
             )),
           ),
         ),

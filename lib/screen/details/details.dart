@@ -14,6 +14,8 @@ import './widget/star_imbd_details.dart';
 import './widget/title_details.dart';
 
 class DetailsScreen extends StatelessWidget {
+  const DetailsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     Get.find<ControllerAnimation>().stopAnime();
@@ -28,7 +30,7 @@ class DetailsScreen extends StatelessWidget {
           child: Stack(
             children: [
               ImageWidgetDetails(),
-              FadeWidgetDetails(),
+              const FadeWidgetDetails(),
               TitleTextDetails(),
               MovieInfoIconDetails(),
               DirAndWrInfo(),

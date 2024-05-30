@@ -8,9 +8,11 @@ import '../../../utils/constants.dart';
 class MainSection extends StatelessWidget {
   final _savedController = Get.find<SavedController>();
 
+  MainSection({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: gWidth,
       height: gHeight / 1.311,
       child: ListView.builder(
@@ -18,15 +20,15 @@ class MainSection extends StatelessWidget {
           itemCount: _savedController.listOfSaved.length,
           itemBuilder: (ctx, index) {
             return Container(
-              margin: EdgeInsets.all(5),
+              margin: const EdgeInsets.all(5),
               width: double.infinity,
               height: gHeight / 5,
               child: Row(
                 children: [
                   FadeInDown(
-                    delay: Duration(milliseconds: 500),
+                    delay: const Duration(milliseconds: 500),
                     child: Container(
-                      margin: EdgeInsets.all(5),
+                      margin: const EdgeInsets.all(5),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           image: DecorationImage(
@@ -40,7 +42,7 @@ class MainSection extends StatelessWidget {
                       height: double.infinity,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 3,
                   ),
                   Column(
@@ -48,24 +50,24 @@ class MainSection extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       FadeInLeft(
-                        delay: Duration(milliseconds: 600),
+                        delay: const Duration(milliseconds: 600),
                         from: 80,
-                        child: Container(
+                        child: SizedBox(
                           width: 200,
                           height: 25,
                           child: Text(
                             _savedController
                                 .listOfSaved[index]
                                 .title,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.w500),
                           ),
                         ),
                       ),
                       FadeInLeft(
-                        delay: Duration(milliseconds: 700),
+                        delay: const Duration(milliseconds: 700),
                         from: 80,
-                        child: Container(
+                        child: SizedBox(
                           width: 150,
                           height: 20,
                           child: Text(
@@ -79,11 +81,11 @@ class MainSection extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 35,
                       ),
                       FadeInLeft(
-                        delay: Duration(milliseconds: 800),
+                        delay: const Duration(milliseconds: 800),
                         from: 80,
                         child: Row(
                           children: [
@@ -94,7 +96,7 @@ class MainSection extends StatelessWidget {
                                 color: Colors.yellow,
                                 borderRadius: BorderRadius.circular(10),
                               ),
-                              child: Center(
+                              child: const Center(
                                 child: Text(
                                   "IMBd",
                                   style: TextStyle(
@@ -103,7 +105,7 @@ class MainSection extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 5,
                             ),
                             Text(
@@ -116,7 +118,7 @@ class MainSection extends StatelessWidget {
                                   fontWeight: FontWeight.w500,
                                   fontSize: 16),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 20,
                             ),
                             IconButton(
@@ -125,7 +127,7 @@ class MainSection extends StatelessWidget {
                                       
                                       barrierDismissible: false,
                                       title: "Warning!",
-                                      content: Text(
+                                      content: const Text(
                                         "Do you really wanna remove this movie from this list?",
                                         textAlign: TextAlign.center,
                                       ),
@@ -137,7 +139,7 @@ class MainSection extends StatelessWidget {
                                         Get.back();
                                       });
                                 },
-                                icon: Icon(
+                                icon: const Icon(
                                   Icons.remove_circle_outline,
                                   color: Colors.red,
                                 ))

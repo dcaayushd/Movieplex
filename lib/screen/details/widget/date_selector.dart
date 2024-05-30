@@ -20,13 +20,15 @@ class DateSelectorWidget extends StatelessWidget {
     {'day': 'Sun', 'num': '13'},
   ];
 
+  DateSelectorWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Positioned(
       bottom: 15,
       child: FadeInDown(
-        delay: Duration(milliseconds: 1200),
-        child: Container(
+        delay: const Duration(milliseconds: 1200),
+        child: SizedBox(
           width: gWidth,
           height: gHeight / 6,
           child: CarouselSlider(
@@ -45,21 +47,21 @@ class DateSelectorWidget extends StatelessWidget {
                     _reserveController.isSelected(cal);
                   },
                   child: AnimatedContainer(
-                    duration: Duration(milliseconds: 400),
+                    duration: const Duration(milliseconds: 400),
                     width: 100,
                     decoration: BoxDecoration(
                         border: _reserveController.selectedIndex == cal
                             ? Border.all(
-                                color: Color.fromARGB(255, 204, 204, 204),
+                                color: const Color.fromARGB(255, 204, 204, 204),
                                 width: 3)
                             : null,
                         borderRadius: BorderRadius.circular(15),
                         color: _reserveController.selectedIndex == cal
                             ? Colors.red
-                            : Color.fromARGB(255, 226, 226, 226)),
+                            : const Color.fromARGB(255, 226, 226, 226)),
                     child: Column(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         Expanded(
@@ -69,7 +71,7 @@ class DateSelectorWidget extends StatelessWidget {
                               style: TextStyle(
                                 color: _reserveController.selectedIndex == cal
                                     ? Colors.white
-                                    : Color.fromARGB(255, 56, 56, 56),
+                                    : const Color.fromARGB(255, 56, 56, 56),
                                 fontSize: 18,
                                 fontWeight: FontWeight.w300,
                               ),
@@ -83,7 +85,7 @@ class DateSelectorWidget extends StatelessWidget {
                             style: TextStyle(
                               color: _reserveController.selectedIndex == cal
                                   ? Colors.white
-                                  : Color.fromARGB(255, 56, 56, 56),
+                                  : const Color.fromARGB(255, 56, 56, 56),
                               fontSize: 30,
                               fontWeight: FontWeight.bold,
                             ),
@@ -96,7 +98,7 @@ class DateSelectorWidget extends StatelessWidget {
                             style: TextStyle(
                               color: _reserveController.selectedIndex == cal
                                   ? Colors.white
-                                  : Color.fromARGB(255, 56, 56, 56),
+                                  : const Color.fromARGB(255, 56, 56, 56),
                               fontSize: 15,
                               fontWeight: FontWeight.w300,
                             ),

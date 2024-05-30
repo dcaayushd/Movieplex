@@ -8,6 +8,8 @@ import '../../../controller/card_controller.dart';
 class DirAndWrInfo extends StatelessWidget {
   
   final _cardController = Get.find<CardController>();
+
+  DirAndWrInfo({super.key});
   
   
 
@@ -18,61 +20,61 @@ class DirAndWrInfo extends StatelessWidget {
       left: 20,
       right: 10,
       child: FadeInDown(
-        delay: Duration(milliseconds: 700),
-        child: Container(
+        delay: const Duration(milliseconds: 700),
+        child: SizedBox(
           width: gWidth,
           child: Row(
             children: [
-              Container(
+              SizedBox(
                 width: 160,
                 child: FittedBox(
                   child: RichText(
                     text: TextSpan(
                       text: 'Director',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                         color: Colors.black,
                         fontWeight: FontWeight.w400,
                       ),
                       children: <TextSpan>[
-                        TextSpan(
+                        const TextSpan(
                           text: ' : ',
                         ),
                         TextSpan(
                             text:
-                                "${_cardController.listOfMovies[_cardController.currentIndex.value].director}",
-                            style: TextStyle(fontWeight: FontWeight.bold)),
+                                _cardController.listOfMovies[_cardController.currentIndex.value].director,
+                            style: const TextStyle(fontWeight: FontWeight.bold)),
                       ],
                     ),
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 5,
               ),
-              Text(" | "),
-              SizedBox(
+              const Text(" | "),
+              const SizedBox(
                 width: 5,
               ),
-              Container(
+              SizedBox(
                 width: 180,
                 child: FittedBox(
                   child: RichText(
                     text: TextSpan(
                       text: 'Writer',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                         color: Colors.black,
                         fontWeight: FontWeight.w400,
                       ),
                       children: <TextSpan>[
-                        TextSpan(
+                        const TextSpan(
                           text: ' : ',
                         ),
                         TextSpan(
                             text:
-                                "${_cardController.listOfMovies[_cardController.currentIndex.value].writer}",
-                            style: TextStyle(fontWeight: FontWeight.bold)),
+                                _cardController.listOfMovies[_cardController.currentIndex.value].writer,
+                            style: const TextStyle(fontWeight: FontWeight.bold)),
                       ],
                     ),
                   ),

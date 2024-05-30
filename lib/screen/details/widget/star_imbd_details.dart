@@ -7,22 +7,24 @@ import '../../../controller/card_controller.dart';
 class MovieInfoIconDetails extends StatelessWidget {
   final _cardController = Get.find<CardController>();
 
+  MovieInfoIconDetails({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Positioned(
       top: 280,
       left: 10,
       child: FadeInDown(
-        delay: Duration(milliseconds: 500),
+        delay: const Duration(milliseconds: 500),
         child: Row(
           children: [
             Row(
               children: [
-                Icon(
+                const Icon(
                   Icons.star,
                   color: Colors.yellow,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 5,
                 ),
                 Text(
@@ -30,7 +32,7 @@ class MovieInfoIconDetails extends StatelessWidget {
                       .listOfMovies[
                           _cardController.currentIndex.value]
                       .iMBd,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18,
                     color: Colors.yellow,
                     fontWeight: FontWeight.bold,
@@ -38,11 +40,11 @@ class MovieInfoIconDetails extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 3),
+              padding: const EdgeInsets.symmetric(horizontal: 3),
               width: 95,
               height: 30,
               decoration: BoxDecoration(
@@ -51,7 +53,7 @@ class MovieInfoIconDetails extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     "Time",
                     style: TextStyle(
                       color: Colors.black,
@@ -63,7 +65,7 @@ class MovieInfoIconDetails extends StatelessWidget {
                         .listOfMovies[
                             _cardController.currentIndex.value]
                         .time,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w500,
                     ),

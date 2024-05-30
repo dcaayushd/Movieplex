@@ -6,18 +6,18 @@ import './widget/fade.dart';
 import './widget/main_pic.dart';
 
 class MoviesScreen extends StatelessWidget {
-  const MoviesScreen({Key? key}) : super(key: key);
+  const MoviesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Container(
+        body: SizedBox(
           height: gHeight,
           child: Stack(
             children: [
               MainPic(),
-              FadeWidget(),
+              const FadeWidget(),
               MovieCard(),
             ],
           ),

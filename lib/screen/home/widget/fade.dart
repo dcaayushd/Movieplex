@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FadeWidget extends StatelessWidget {
-  const FadeWidget({Key? key}) : super(key: key);
+  const FadeWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

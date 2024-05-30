@@ -8,16 +8,18 @@ import '../../../utils/constants.dart';
 class RepetitiousIMBd extends StatelessWidget {
   final _cardController = Get.find<CardController>();
 
+  RepetitiousIMBd({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(
+        const Icon(
           Icons.star,
           color: Colors.yellow,
           size: 20,
         ),
-        SizedBox(
+        const SizedBox(
           width: 5,
         ),
         Obx(() {
@@ -39,16 +41,18 @@ class RepetitiousIMBd extends StatelessWidget {
 class RepetitiousTime extends StatelessWidget {
   final _cardController = Get.find<CardController>();
 
+  RepetitiousTime({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(
+        const Icon(
           Icons.access_time_filled,
           color: iconColor,
           size: 20,
         ),
-        SizedBox(
+        const SizedBox(
           width: 5,
         ),
         Obx(() {
@@ -68,18 +72,18 @@ class RepetitiousTime extends StatelessWidget {
 
 //Repetitious Watch Text
 class RepetitiousWatch extends StatelessWidget {
-  const RepetitiousWatch({Key? key}) : super(key: key);
+  const RepetitiousWatch({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(
+        const Icon(
           Icons.play_circle_filled,
           color: iconColor,
           size: 20,
         ),
-        SizedBox(
+        const SizedBox(
           width: 5,
         ),
         Text(

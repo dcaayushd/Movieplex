@@ -11,6 +11,8 @@ class MovieCard extends StatelessWidget {
   final CarouselController _carouselController = CarouselController();
  final _cardController = Get.find<CardController>();
 
+  MovieCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Positioned(
@@ -20,7 +22,7 @@ class MovieCard extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           Get.to(
-            () => DetailsScreen(),
+            () => const DetailsScreen(),
           );
         },
         child: CarouselSlider(
@@ -46,7 +48,7 @@ class MovieCard extends StatelessWidget {
                       child: Column(
                         children: [
                           Container(
-                            margin: EdgeInsets.all(20),
+                            margin: const EdgeInsets.all(20),
                             height: 300,
                             width: gWidth,
                             clipBehavior: Clip.hardEdge,
@@ -60,13 +62,13 @@ class MovieCard extends StatelessWidget {
                           ),
                           Text(
                             movie.title,
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Colors.black,
                               fontSize: 19,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Text(
@@ -77,17 +79,17 @@ class MovieCard extends StatelessWidget {
                               fontWeight: FontWeight.w400,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 15,
                           ),
                           Container(
-                            padding: EdgeInsets.symmetric(horizontal: 20),
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 RepetitiousIMBd(),
                                 RepetitiousTime(),
-                                RepetitiousWatch(),
+                                const RepetitiousWatch(),
                               ],
                             ),
                           )

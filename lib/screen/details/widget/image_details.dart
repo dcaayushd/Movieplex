@@ -7,9 +7,11 @@ import '../../../utils/constants.dart';
 class ImageWidgetDetails extends StatelessWidget {
   final _cardController = Get.find<CardController>();
 
+  ImageWidgetDetails({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: gWidth,
       height: gHeight / 1.8,
       child: Hero(

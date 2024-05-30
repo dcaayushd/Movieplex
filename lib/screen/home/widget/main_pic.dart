@@ -9,6 +9,8 @@ class MainPic extends StatelessWidget {
   //...
   final _cardController = Get.find<CardController>();
   final _animeController = Get.find<ControllerAnimation>();
+
+  MainPic({super.key});
   //...
   @override
   Widget build(BuildContext context) {

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../utils/constants.dart';
 
 class FadeWidgetDetails extends StatelessWidget {
-  const FadeWidgetDetails({Key? key}) : super(key: key);
+  const FadeWidgetDetails({super.key});
 
   @override
   Widget build(BuildContext context) {

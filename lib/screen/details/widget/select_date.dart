@@ -8,25 +8,27 @@ import '../../../controller/reservation_controller.dart';
 class SelectDateTextAndButton extends StatelessWidget {
   final _reserveController = Get.find<ReservationController>();
 
+  SelectDateTextAndButton({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Positioned(
       top: 520,
       left: 15,
       right: 15,
-      child: Container(
+      child: SizedBox(
         width: gWidth,
         child: FadeInDown(
-          delay: Duration(milliseconds: 1000),
+          delay: const Duration(milliseconds: 1000),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
+              SizedBox(
                 width: 100,
                 height: 30,
                 child: Center(
                   child: RichText(
-                    text: TextSpan(
+                    text: const TextSpan(
                       text: 'Select ',
                       style: TextStyle(
                         fontSize: 17,
@@ -48,7 +50,7 @@ class SelectDateTextAndButton extends StatelessWidget {
                 ),
               ),
               AnimatedContainer(
-                duration: Duration(milliseconds: 300),
+                duration: const Duration(milliseconds: 300),
                 width: 120,
                 height: 35,
                 child: GetBuilder<ReservationController>(builder: (_) {
@@ -61,7 +63,7 @@ class SelectDateTextAndButton extends StatelessWidget {
                             elevation: 0,
                             onPressed: () {},
                             color: Colors.red,
-                            child: FittedBox(
+                            child: const FittedBox(
                                 child: Text(
                               "Reservation",
                               style: TextStyle(color: Colors.white),

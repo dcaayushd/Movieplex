@@ -9,6 +9,8 @@ import './widget/appbar.dart';
 import './widget/buy_button.dart';
 
 class SavedMovieScreen extends StatelessWidget {
+  const SavedMovieScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -18,7 +20,7 @@ class SavedMovieScreen extends StatelessWidget {
           child: Container(
             width: gWidth,
             height: gHeight,
-            margin: EdgeInsets.all(10),
+            margin: const EdgeInsets.all(10),
             child: GetBuilder<SavedController>(builder: (context) {
               return SingleChildScrollView(
                 child: Column(
@@ -27,8 +29,8 @@ class SavedMovieScreen extends StatelessWidget {
                   children: [
                     Get.find<SavedController>().listOfSaved.isEmpty
                         ? FadeInLeft(
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 8.0),
+                            child: const Padding(
+                              padding: EdgeInsets.only(left: 8.0),
                               child: Text(
                                 "Nothing to show🙄",
                                 style: TextStyle(
@@ -41,7 +43,7 @@ class SavedMovieScreen extends StatelessWidget {
                         : Column(
                             children: [
                               MainSection(),
-                              BuyButton(),
+                              const BuyButton(),
                             ],
                           )
                   ],
