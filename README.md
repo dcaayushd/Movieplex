@@ -11,9 +11,9 @@ Movieplex is a Flutter application designed to provide a user-friendly and visua
 
 ## Screenshots
 
-![Screenshot 1](screenshots/movieplex1.png)
-![Screenshot 2](screenshots/movieplex2.png)
-![Screenshot 3](screenshots/movieplex3.png)
+![Home](assets/previews/home.png)
+![Detail](assets/previews/detail.png)
+![Reservation](assets/previews/reservation.png)
 
 ## Dependencies
 
