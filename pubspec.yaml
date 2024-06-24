@@ -9,26 +9,25 @@ environment:
   sdk: ">=2.17.0-69.2.beta <3.0.0"
 
 dependencies:
+  cached_network_image: ^3.3.1
+  cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-
-  cupertino_icons: ^1.0.2
-  carousel_slider: ^4.0.0
-  get: ^4.6.1
-  animate_do: ^2.1.0
+  google_fonts: ^6.2.1
+  intl: ^0.19.0
 
 dev_dependencies:
+  flutter_lints: ^4.0.0
   flutter_test:
     sdk: flutter
-
-  flutter_lints: ^4.0.0
 
 flutter:
   uses-material-design: true
 
   assets:
     - assets/images/
-
+    - assets/emoticons/
+    - assets/previews/
   # fonts:
   #   - family: Schyler
   #     fonts:
